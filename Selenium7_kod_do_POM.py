@@ -21,7 +21,13 @@ sleep(2)
 try:
     assert page.get_page_url() == addr_after_login
 except AssertionError:
-
+    print('Asercja nie przeszła')
+    raise
+else:
+    print('Asercja przeszła')
+finally:
+    print('Po asercji')
+    page.clear_and_close()
 
 
 page.make_screenshot('SKRIIIN')
