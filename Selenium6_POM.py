@@ -1,7 +1,6 @@
 # Page Object Model
 import time
 import datetime
-
 from selenium.webdriver.common.by import By
 
 class LoginPage:
