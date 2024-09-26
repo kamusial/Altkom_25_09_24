@@ -1,16 +1,29 @@
 *** Settings ***
 Library    SeleniumLibrary
+test setup  on start
+test teardown    in the end
+suite setup    # na początku suity - zestawu testów
+suite teardown  # na końcu suity
 
 *** Variables ***
 ${wikipedia login}    RobotTests
-${wikipedia correct password}    RobotFramewor
+${wikipedia correct password}    RobotFramework
 ${wikipedia wrong password}    1234
 ${error message}    Podany login lub hasło są nieprawidłowe. Spróbuj jeszcze raz.
+
 *** Keywords ***
-Log in wikipedia
-    [Arguments]    ${login}    ${password}
+on start
     Open Browser    https://pl.wikipedia.org/     chrome    #executable_path=sciezka do sterownika
     maximize browser window
+
+in the end
+    capture page screenshot    screens/my screen-{index}.png
+    close browser
+
+
+Log in wikipedia
+    [Arguments]    ${login}    ${password}
+
 #    Click element    pt-login-2
     Click element    id:pt-login-2
     input text    id:wpName1    ${login}
@@ -24,8 +37,7 @@ Log in wikipedia
 Correct log in
     Log in wikipedia    ${wikipedia login}    ${wikipedia correct password}
     element should not be visible    id:pt-login-2
-    capture page screenshot    screens/my screen-{index}.png
-    close browser
+
 
 Incrrect log in
     Log in wikipedia    Kamil    Piesek
@@ -33,5 +45,3 @@ Incrrect log in
     log    Przechwycona wiadomość: ${my error message}
     Should Be Equal   ${my error message}     ${error message}
     log to console    Przechwycona wiadomość: ${my error message}
-    capture page screenshot    screens/my screen-{index}.png
-    close browser

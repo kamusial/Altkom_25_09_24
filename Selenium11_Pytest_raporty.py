@@ -82,3 +82,11 @@ def test_check_name(sample_data):
 
 def test_check_age(sample_data):
     assert sample_data["age"] == 30
+
+
+# pip install pytest-html
+# pytest --html=report.html
+
+# pytest --junitxml=report.xml
+
+# pip install pytest-tldr

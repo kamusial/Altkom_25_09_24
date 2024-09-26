@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="3" tests="12" time="67.500" timestamp="2024-09-26T14:15:56.922714+02:00" hostname="WIN10-2024"><testcase classname="Selenium10_Pytest" name="test_login_page[standard_user-secret_sauce-https://www.saucedemo.com/inventory.html]" time="15.690" /><testcase classname="Selenium10_Pytest" name="test_login_page[locked_out_user-secret_sauce-https://www.saucedemo.com/]" time="15.499" /><testcase classname="Selenium10_Pytest" name="test_login_page[problem_user-secret_sauce-https://www.saucedemo.com/inventory.html]" time="15.623" /><testcase classname="Selenium10_Pytest" name="test_login_page[performance_glitch_user-secret_sauce-https://www.saucedemo.com/inventory.html]" time="20.288" /><testcase classname="Selenium10_Pytest" name="test2" time="0.002"><skipped type="pytest.xfail" message="Not implemented yet" /></testcase><testcase classname="Selenium10_Pytest" name="test3" time="0.001"><skipped type="pytest.skip" message="Not implemented yet">C:\Users\Student\Desktop\Altkom_25_09_24\Selenium10_Pytest.py:46: Not implemented yet</skipped></testcase><testcase classname="Selenium10_Pytest" name="test4" time="0.002"><failure message="assert 3 == 6">Traceback (most recent call last):
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 341, in from_call
+    result: TResult | None = func()
+                             ^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 242, in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds), when=when, reraise=reraise
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\threadexception.py", line 92, in pytest_runtest_call
+    yield from thread_exception_runtest_hook()
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\threadexception.py", line 68, in thread_exception_runtest_hook
+    yield
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\unraisableexception.py", line 95, in pytest_runtest_call
+    yield from unraisable_exception_runtest_hook()
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\unraisableexception.py", line 70, in unraisable_exception_runtest_hook
+    yield
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py", line 846, in pytest_runtest_call
+    yield from self._runtest_for(item, "call")
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py", line 829, in _runtest_for
+    yield
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py", line 880, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 122, in _multicall
+    teardown.throw(exception)  # type: ignore[union-attr]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\skipping.py", line 257, in pytest_runtest_call
+    return (yield)
+            ^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py", line 174, in pytest_runtest_call
+    item.runtest()
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 1627, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py", line 513, in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py", line 120, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 139, in _multicall
+    raise exception.with_traceback(exception.__traceback__)
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py", line 103, in _multicall
+    res = hook_impl.function(*args)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py", line 159, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Student\Desktop\Altkom_25_09_24\Selenium10_Pytest.py", line 52, in test4
+    assert 3 == 6
+AssertionError: assert 3 == 6</failure></testcase><testcase classname="Selenium10_Pytest" name="test_deprecated_feature" time="0.002" /><testcase classname="Selenium10_Pytest" name="test5" time="0.001"><skipped type="pytest.skip" message=" pomijane na Windows">C:\Users\Student\Desktop\Altkom_25_09_24\Selenium10_Pytest.py:61:  pomijane na Windows</skipped></testcase><testcase classname="Selenium10_Pytest" name="test_divide_by_zero" time="0.002" /><testcase classname="Selenium10_Pytest" name="test_check_name" time="0.001" /><testcase classname="Selenium10_Pytest" name="test_check_age" time="0.001" /></testsuite></testsuites>
