@@ -11,7 +11,7 @@ def wait_for_id(element_id):
     znaleziono = excon.visibility_of_element_located(lokalizator)
     oczekiwator = WebDriverWait(driver, timeout)
     return oczekiwator.until(znaleziono, timeout_message)
-
+#    return WebDriverWait(driver, timeout=5).until(excon.visibility_of_element_located((By.ID, element_id)), timeout_message)
 
 print('Selenium3 is now running')
 driver = webdriver.Chrome()
