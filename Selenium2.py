@@ -6,9 +6,9 @@ import time
 import datetime
 
 def make_screenshot(driver):
-    driver.get_screenshot_as_file('screen2.png')
+#     driver.get_screenshot_as_file('screen2.png')
     teraz = datetime.datetime.now()
-    file_name = teraz.strftime('screenshot%H-%M-%S.png')
+    file_name = teraz.strftime('C:\\Users\\Student\\Desktop\\Altkom_25_09_24\\screens\\screenshot%H-%M-%S.png')
     driver.get_screenshot_as_file(file_name)
 
 

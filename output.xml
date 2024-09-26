@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.1 on win32)" generated="2024-09-26T12:05:03.066094" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot1 wikipedia" source="C:\Users\Student\Desktop\Altkom_25_09_24\Robot1_wikipedia.robot">
+<test id="s1-t1" name="Test 1" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-26T12:05:03.433335" level="INFO">Opening browser 'chrome' to base url 'https://pl.wikipedia.org/'.</msg>
+<arg>https://pl.wikipedia.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-26T12:05:03.433335" elapsed="2.652879"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-26T12:05:06.100207" elapsed="0.164230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-26T12:05:06.277443" level="INFO">Clicking element 'id:pt-login-2'.</msg>
+<arg>id:pt-login-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-26T12:05:06.276444" elapsed="1.162876"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-26T12:05:09.440701" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-26T12:05:07.439320" elapsed="2.001381"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-26T12:05:09.441619" elapsed="2.232137"/>
+</kw>
+<status status="PASS" start="2024-09-26T12:05:03.432232" elapsed="8.242869"/>
+</test>
+<status status="PASS" start="2024-09-26T12:05:03.068341" elapsed="8.611146"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot1 wikipedia">Robot1 wikipedia</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

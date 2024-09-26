@@ -38,7 +38,7 @@ class LoginPage:
 
     def make_screenshot(self, name='screenshot'):
         teraz = datetime.datetime.now()
-        file_name = teraz.strftime(str(name)+'_%H-%M-%S.png')
+        file_name = teraz.strftime('C:\\Users\\Student\\Desktop\\Altkom_25_09_24\\screens\\'+str(name)+'_%H-%M-%S.png')
         self.driver.get_screenshot_as_file(file_name)
 
 

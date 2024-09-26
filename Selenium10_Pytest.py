@@ -17,7 +17,7 @@ test_data = [
 ]
 
 @pytest.mark.parametrize('user, password, url', test_data)
-@pytest.mark.skip()
+# @pytest.mark.skip()
 def test_login_page(user, password, url):
     driver = webdriver.Chrome()
     page = LoginPage(driver)
@@ -71,3 +71,14 @@ def divide(a, b):
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
         divide(1, 0)
+
+
+@pytest.fixture
+def sample_data():
+    return {"name": "John Doe", "age": 30, "occupation": "Engineer"}
+
+def test_check_name(sample_data):
+    assert sample_data["name"] == "John Doe"
+
+def test_check_age(sample_data):
+    assert sample_data["age"] == 30
