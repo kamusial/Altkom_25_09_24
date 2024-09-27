@@ -63,7 +63,21 @@ windowsNames = driver.window_handles
 print(currentWindowName)
 print(windowsNames)
 
-driver.switch_to.window(windowsNames[1])
+# driver.switch_to.window(windowsNames[1])
 
+for window in windowsNames:
+    if window != currentWindowName:
+        driver.switch_to.window(window)
+        print(f'jesteś w nowej karcie: {driver.title}, \n{driver.current_url}')
 
-driver.quit()
+driver.switch_to.frame(driver.find_element(By.ID, 'iframeResult'))
+firstName = driver.find_element(By.ID, 'fname')
+
+if firstName.is_enabled():
+    firstName.clear()
+    firstName.send_keys('Kamil')
+else:
+    print('nie da się kliknąć')
+
+driver.close()     # zamyka aktualną kartę
+driver.quit()      # zamyka przeglądarkę
