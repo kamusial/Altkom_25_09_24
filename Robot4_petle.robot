@@ -36,6 +36,7 @@ Loop a range from 0 to end index
 Loop a range from start to end index
     FOR    ${index}    IN RANGE    1    10
         Log    ${index}    # 1-9
+        sleep 3
     END
 
 Loop a range from start to end index with steps
