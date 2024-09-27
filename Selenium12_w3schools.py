@@ -6,7 +6,12 @@ driver = webdriver.Chrome()
 driver.get("https://www.w3schools.com/")
 driver.maximize_window()
 time.sleep(2)
-driver.find_element(By.ID, 'accept-choices').click()
+buttons = driver.find_elements(By.ID, 'accept-choices')
+if buttons:
+    buttons[0].click()
+    print("Przycisk został kliknięty.")
+else:
+    print("Przycisk nie istnieje.")
 time.sleep(2)
 
 # ................jak obsłużyć przycisk, który może, ale nie musi się pojawić
@@ -71,13 +76,29 @@ for window in windowsNames:
         print(f'jesteś w nowej karcie: {driver.title}, \n{driver.current_url}')
 
 driver.switch_to.frame(driver.find_element(By.ID, 'iframeResult'))
-firstName = driver.find_element(By.ID, 'fname')
 
+firstName = driver.find_element(By.ID, 'fname')
 if firstName.is_enabled():
     firstName.clear()
     firstName.send_keys('Kamil')
 else:
-    print('nie da się kliknąć')
+    print('nie da się wpisać')
+
+lastName = driver.find_element(By.ID, 'lname')
+if lastName.is_enabled():
+    lastName.clear()
+    lastName.send_keys('Nazwisko')
+else:
+    print('nie da się wpisać')
+
+time.sleep(2)
+driver.find_element(By.XPATH, '/html/body/form/input[3]').click()
+time.sleep(2)
+
+submit_confirmation = driver.find_element(By.XPATH, '/html/body/h1')
+if submit_confirmation.text != 'Submitted Form Data':
+    print('zwrocono: {submit_confirmation.text}')
+
 
 driver.close()     # zamyka aktualną kartę
 driver.quit()      # zamyka przeglądarkę
