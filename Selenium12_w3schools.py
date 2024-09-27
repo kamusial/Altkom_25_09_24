@@ -4,6 +4,7 @@ import time
 
 driver = webdriver.Chrome()
 driver.get("https://www.w3schools.com/")
+driver.maximize_window()
 time.sleep(2)
 driver.find_element(By.ID, 'accept-choices').click()
 time.sleep(2)
@@ -42,3 +43,27 @@ time.sleep(2)
 menu = driver.find_element(By.ID, 'navbtn_tutorials')
 HTMLtutorial = driver.find_element(By.XPATH, '//*[@id="tutorials_html_css_links_list"]/div[1]/a[2]')
 
+webdriver.ActionChains(driver).move_to_element(menu).click().move_to_element(HTMLtutorial).click().perform()
+time.sleep(2)
+
+HTML_forms_attributes = driver.find_element(By.XPATH, '//*[@id="leftmenuinnerinner"]/a[41]')
+HTML_forms_attributes.click()
+time.sleep(2)
+tryityourself = driver.find_element(By.XPATH, '//*[@id="main"]/div[3]/a')
+tryityourself.click()
+time.sleep(2)
+
+# runbtn = driver.find_element(By.ID, 'runbtn')
+# runbtn.click()
+# time.sleep(2)
+# otwarto w nowej karcie
+
+currentWindowName = driver.current_window_handle
+windowsNames = driver.window_handles
+print(currentWindowName)
+print(windowsNames)
+
+driver.switch_to.window(windowsNames[1])
+
+
+driver.quit()
